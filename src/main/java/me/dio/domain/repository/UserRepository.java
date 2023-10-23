@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 //JpaRepository<User, Long> = User refere-se a classe que queremos atribuir e LONG o formato do identificador
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
+
+    boolean existsByAccountNumber(String accountNumber);
+
 }
